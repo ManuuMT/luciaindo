@@ -1,0 +1,113 @@
+"use client";
+
+import profile from "@/assets/profile.jpg";
+import image from "@/assets/selfLove.png";
+import Modal from "@/components/Modal/Modal";
+import { handleOverflow } from "@/utils/handleOverflow";
+import Link from "next/link";
+import { useState } from "react";
+import { AiOutlineMail } from "react-icons/ai";
+import { BsInstagram, BsWhatsapp } from "react-icons/bs";
+import "./Hero.css";
+
+const Hero = () => {
+  // * States
+  const [openModal, setOpenModal] = useState(false);
+
+  // * Methods
+  const OpenModal = () => {
+    setOpenModal(true);
+    handleOverflow();
+  };
+
+  const CloseModal = () => {
+    setOpenModal(false);
+    handleOverflow();
+  };
+
+  // * Render
+  return (
+    <section
+      className="w-screen relative bg-slate-50"
+      style={{ height: "calc(100vh + 64px)" }}
+      id="hero"
+    >
+      <div className="w-screen h-full flex justify-center items-center relative z-10 gap-10">
+        <div className="flex flex-col w-1/3 gap-10">
+          <h1 className="text-custom-blue">
+            Un espacio seguro para sanar y crecer
+          </h1>
+          <button className="py-3 bg-custom-blue" onClick={OpenModal}>
+            ¡Quiero empezar!
+          </button>
+        </div>
+        <div className="w-2/3" style={{ width: 500, height: 500 }}>
+          <img src={image.src} className="w-full h-full object-contain" />
+        </div>
+      </div>
+      <div className="wave">
+        <svg
+          data-name="Layer 1"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
+      <Modal isOpen={openModal} close={CloseModal}>
+        <div className="flex flex-col w-[500px]">
+          <h3 className="text-black">¡Ponte en contacto!</h3>
+          <p className="text-black">
+            Anímate a comenzar tu proceso de autodescrubimiento de la mano de
+            una profesional de la salud mental.
+          </p>
+          <div className="flex mt-5 gap-10">
+            {/* Foto de perfil */}
+            <div className="w-36 rounded-md overflow-hidden">
+              <img
+                src={profile.src}
+                className="w-full h-full object-contain saturate-[1.2]"
+              />
+            </div>
+            {/* Datos de contacto */}
+            <div className="flex flex-col justify-center gap-1">
+              <Link
+                href="https://api.whatsapp.com/send?phone=2284218948"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="flex items-center text-black gap-2">
+                  <BsWhatsapp size={20} />
+                  <p className="text-xl">2284 21 89 48</p>
+                </div>
+              </Link>
+              <Link
+                href="https://instagram.com/psi.luciaindo"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="flex items-center text-black gap-2">
+                  <BsInstagram size={20} />
+                  <p className="text-xl">psi.luciaindo</p>
+                </div>
+              </Link>
+              <Link
+                href={`mailto:luciaindo2@gmail.com?subject=Solicitud de entrevista&body=Hola Lucía! Me gustaría agendar un turno con vos para comenzar a hacer terapia...`}
+              >
+                <div className="flex items-center text-black gap-2">
+                  <AiOutlineMail size={20} />
+                  <p className="text-xl">luciaindo2@gmail.com</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Modal>
+    </section>
+  );
+};
+
+export default Hero;
