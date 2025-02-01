@@ -8,7 +8,7 @@ const Footer = () => {
           Lic. Lucía Indo © 2025 - Sitio creado con
           <span className="text-red-500"> ♥ </span> por{" "}
           <Link
-            href="https://manumaldonado.com"
+            href="https://manumaldonado.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
