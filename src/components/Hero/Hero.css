@@ -1,18 +1,17 @@
 .wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
   overflow: hidden;
-  line-height: 0;
   transform: rotate(180deg);
 }
 
 .wave svg {
   position: relative;
   display: block;
-  width: calc(195% + 1.3px);
-  height: 413px;
+  width: 195%;
+  height: 60vh;
   transform: rotateY(180deg);
 }
 

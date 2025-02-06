@@ -1,19 +1,19 @@
 import Link from "next/link";
 
+const url = "https://manumaldonado.netlify.app/";
+
 const Footer = () => {
   return (
-    <footer className="w-screen">
-      <div className="w-full h-10 bg-white flex items-center justify-center">
-        <div className="text-black max-w-7xl">
-          Lic. Lucía Indo © 2025 - Sitio creado con
-          <span className="text-red-500"> ♥ </span> por{" "}
-          <Link
-            href="https://manumaldonado.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Manu Maldonado
-          </Link>
+    <footer className="w-screen bg-white flex justify-center">
+      <div className="container">
+        <div className="w-full py-2 flex justify-center items-center text-xs md:text-sm lg:text-base">
+          <div className="text-black text-center">
+            Lic. Lucía Indo © 2025 - Sitio web creado con
+            <span className="text-red-500"> ♥ </span> por{" "}
+            <Link href={url} target="_blank" rel="noreferrer">
+              Manu Maldonado
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

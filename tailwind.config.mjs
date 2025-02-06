@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -7,6 +8,7 @@ export default {
         custom: {
           blue: "#233551",
           rgba3: "rgba(0,0,0,0.3)",
+          "white-rgba6": "rgba(255,255,255,0.6)",
         },
       },
       colors: {
@@ -16,18 +18,31 @@ export default {
           cyan: "#7EC0B7",
         },
       },
-    },
-    screens: {
-      "2xl": { max: "1535px" },
-      // => @media (max-width: 1535px) { ... }
-      xl: { max: "1279px" },
-      // => @media (max-width: 1279px) { ... }
-      lg: { max: "1023px" },
-      // => @media (max-width: 1023px) { ... }
-      md: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
-      sm: { max: "639px" },
-      // => @media (max-width: 639px) { ... }
+      container: {
+        screens: {
+          "3xs": "350px",
+          "2xs": "400px",
+          xs: "500px",
+          sm: "640px",
+          md: "768px",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1536px",
+          "3xl": "1920px",
+        },
+      },
+      screens: {
+        "3xs": "350px",
+        "2xs": "400px",
+        xs: "500px",
+        "3xl": "1920px",
+      },
+      fontSize: {
+        "2xs": "10px",
+      },
+      lineHeight: {
+        "2xs": "1rem",
+      },
     },
   },
   plugins: [],
