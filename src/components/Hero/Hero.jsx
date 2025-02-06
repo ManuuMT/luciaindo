@@ -30,7 +30,7 @@ const Hero = () => {
       id="hero"
     >
       <div className="container">
-        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 relative z-10">
+        <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 xl:gap-0 relative z-10">
           {/* Title and CTA */}
           <div className="w-5/6 md:w-1/2 2xl:w-3/4 order-1 md:order-[0]">
             <div className="w-full flex flex-col items-center gap-4 md:gap-6 lg:gap-10">
@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
 
           {/* Hero image */}
-          <div className="w-full md:w-1/2 flex justify-center 2xl:justify-start">
+          <div className="w-full md:w-1/2 flex justify-center lg:justify-start">
             <div className="w-5/6 xs:w-2/3 md:w-full lg:w-5/6">
               <img src={image.src} className="w-full h-full object-contain" />
             </div>

@@ -7,7 +7,7 @@ export default {
       textColor: {
         custom: {
           blue: "#233551",
-          rgba3: "rgba(0,0,0,0.3)",
+          rgba5: "rgba(0,0,0,0.5)",
           "white-rgba6": "rgba(255,255,255,0.6)",
         },
       },

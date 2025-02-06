@@ -90,17 +90,17 @@ const Services = () => {
                 />
               </div>
               <h4 className="text-lg lg:text-xl mb-5">Sobre mi</h4>
-              <p className="text-custom-rgba3 text-base lg:text-lg">
+              <p className="text-custom-rgba5 text-base lg:text-lg">
                 Soy Licenciada en Psicología, graduada en la Universidad
                 Nacional de Mar del Plata.
               </p>
-              <p className="text-custom-rgba3 text-base lg:text-lg mt-4">
+              <p className="text-custom-rgba5 text-base lg:text-lg mt-4">
                 Mi formación está orientada hacia la Terapia Cognitivo
                 Conductual y la Terapia de Aceptación y Compromiso (ACT),
                 enfoques que me permiten trabajar de manera práctica y flexible
                 según las necesidades de cada persona.
               </p>
-              <p className="text-custom-rgba3 text-base lg:text-lg mt-4">
+              <p className="text-custom-rgba5 text-base lg:text-lg mt-4">
                 Además, tengo un interés especial en brindar tratamientos
                 sensibles al trauma, asegurando que cada espacio terapéutico sea
                 seguro, respetuoso y empático.
