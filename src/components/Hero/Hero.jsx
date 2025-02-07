@@ -26,7 +26,6 @@ const Hero = () => {
   return (
     <section
       className="w-screen min-h-screen flex justify-center items-center bg-slate-50 relative"
-      // style={{ height: "calc(100vh + 64px)" }}
       id="hero"
     >
       <div className="container">
